@@ -32,7 +32,7 @@ export default class Single extends Component {
 
   getMovieTrailer() {
     return axios.get(
-      `http://api.themoviedb.org/3/movie/${
+      `https://api.themoviedb.org/3/movie/${
         this.props.match.params.id
       }/videos?api_key=${api_key}`
     );

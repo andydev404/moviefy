@@ -33,7 +33,7 @@
 
 .filters .filter-item:active,
 .filters .filter-item:focus {
-  outline: none
+  outline: none;
 }
 
 .filters .filter-item:hover {
@@ -146,10 +146,24 @@
 }
 
 .infinite-scroll-component {
-  padding-top: 1rem
+  padding-top: 1rem;
 }
 
 .loader {
   max-width: 30%;
   margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .search-form .search-form__btn {
+    position: absolute;
+  }
+
+  .movie-filter {
+    border-radius: 4px;
+  }
 }
