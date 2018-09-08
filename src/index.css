@@ -1,0 +1,44 @@
+:root {
+  --color-white: #fff;
+  --color-grey: #ababab;
+  --color-red: #f26144;
+  --color-red-dark: #d64224;
+}
+
+body {
+  background: #133046;
+  font-family: 'Lato', sans-serif;
+  height: 100vh;
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-white);
+}
+
+/** CUSTOM **/
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+/** HEADER **/
+.navbar .nav-link {
+  color: var(--color-grey);
+  font-size: 1.3rem;
+}
+
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: row !important;
+  }
+
+  .navbar-nav .nav-item:not(:last-of-type) {
+    margin-right: 1.5rem;
+  }
+}

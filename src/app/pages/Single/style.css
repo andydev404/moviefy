@@ -1,0 +1,153 @@
+.single-page__banner {
+  background-size: cover;
+  background-position: center;
+  filter: blur(1rem);
+  height: 18rem;
+}
+
+.single-page__content {
+  margin-top: -9rem;
+}
+
+.movie-thumbnail img {
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.movie-info {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-between;
+}
+
+.movie-info__left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.movie-info__left ul li:not(:last-of-type) {
+  margin-right: 1.3rem;
+}
+
+.movie-info__left ul li i {
+  color: var(--color-red);
+  margin-right: 0.3rem;
+}
+
+.trailer-btn {
+  background: rgba(242, 97, 68, 0.76);
+  width: 4rem;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  height: 4rem;
+  display: flex;
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.trailer-btn::before {
+  content: '';
+  background: rgba(242, 97, 68, 0.32);
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: layer1 2s linear infinite;
+  border-radius: 50%;
+}
+
+.trailer-btn::after {
+  content: '';
+  background: rgba(255, 255, 255, 0.1);
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -2;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: layer2 2s linear infinite;
+}
+
+@keyframes layer2 {
+  0% {
+    width: 4rem;
+    height: 4rem;
+    opacity: 1;
+  }
+
+  100% {
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+  }
+}
+
+@keyframes layer1 {
+  0% {
+    width: 4rem;
+    height: 4rem;
+    opacity: 1;
+  }
+
+  100% {
+    width: 6rem;
+    height: 6rem;
+    opacity: 0;
+  }
+}
+
+.synopsis {
+  margin-top: 7rem;
+}
+
+.synopsis__title {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hide-mobile {
+  display: flex;
+}
+
+.hide-desktop {
+  display: none;
+}
+@media (max-width: 767px) {
+  .synopsis {
+    margin-top: 1.8rem;
+  }
+  .hide-mobile {
+    display: none;
+  }
+  .hide-desktop {
+    display: flex;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .movie-thumbnail {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .movie-info,
+  .movie-info__left ul {
+    flex-direction: column;
+  }
+}

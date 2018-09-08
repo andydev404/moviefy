@@ -1,0 +1,24 @@
+{
+  "name": "moviefy",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.3",
+    "classnames": "^2.2.6",
+    "moment": "^2.22.2",
+    "react": "^16.4.2",
+    "react-content-loader": "^3.1.2",
+    "react-dom": "^16.4.2",
+    "react-infinite-scroll-component": "^4.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
+    "reactstrap": "^6.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
